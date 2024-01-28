@@ -1,13 +1,16 @@
 import React from 'react';
 
-const MyList = () => {
-  return (
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
-  );
-}
+const MyList = ({ header, items }) => {
+    return (
+      <div>
+        <h3>{header}</h3>
+        <ol>
+          {items.map(item => (
+            <li key={item.id}>{item.text}</li>
+          ))}
+        </ol>
+      </div>
+    );
+  }
 
 export default MyList;
