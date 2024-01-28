@@ -9,7 +9,7 @@ const MyList = ({ header, items, onItemClick }) => {
           <li
             key={item.id}
             onClick={() => onItemClick(item.id)}
-            style={{ textDecoration: item.clicked ? "line-through" : "none" }}
+            style={{ textDecoration: item.clicked ? "line-through" : "" }}
           >
             {item.text}
           </li>
